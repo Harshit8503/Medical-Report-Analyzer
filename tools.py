@@ -1,7 +1,9 @@
-from crewai_tools import PDFSearchTool
 
+from crewai_tools import SerperDevTool
+from dotenv import load_dotenv
+load_dotenv()
+import os
 
-# OR
+os.environ['SERPER_API_KEY']=os.getenv('SERPER_API_KEY')
+search_tool = SerperDevTool()
 
-# Initialize the tool with a specific PDF path for exclusive search within that document
-pdf_tool = PDFSearchTool(pdf='path/to/your/document.pdf')
