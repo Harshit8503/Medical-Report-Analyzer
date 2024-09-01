@@ -11,8 +11,7 @@ llm=ChatGoogleGenerativeAI(model="gemini-1.5-pro",
                            temperature=0.5,
                            google_api_key=os.getenv("GOOGLE_API_KEY"))
 
-# create a report analyzer 
-# os.environ["OPENAI_API_KEY"]=os.getenv("OPENAI_API_KEY")
+
 report_analyzer=Agent(
     role='Blood Report Analyzer ',
     goal='it should analyze the blood test report {text}, summarizing it in an easy-to-understand manner and also analyze related heath concerns.',
